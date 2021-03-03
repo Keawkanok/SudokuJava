@@ -10,9 +10,8 @@ import sudoku.userinterface.IUserInterfaceContract;
 import java.io.IOException;
 
 public class ControlLogic implements IUserInterfaceContract.EventListener {
-
-    private IStorage storage;
-
+    //Singleton
+    private static IStorage storage;
     private IUserInterfaceContract.View view;
 
     public ControlLogic(IStorage storage, IUserInterfaceContract.View view) {

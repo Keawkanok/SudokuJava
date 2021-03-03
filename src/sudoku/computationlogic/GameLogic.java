@@ -14,10 +14,7 @@ import static sudoku.problemdomain.SudokuGame.GRID_BOUNDARY;
 public class GameLogic {
 
     public static SudokuGame getNewGame() {
-        return new SudokuGame(
-                GameState.NEW,
-                GameGenerator.getNewGameGrid()
-        );
+        return new SudokuGame(GameState.NEW, GameGenerator.getNewGameGrid());
     }
     public static GameState checkForCompletion(int[][] grid) {
         if (sudokuIsInvalid(grid)) return GameState.ACTIVE;

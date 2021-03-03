@@ -28,6 +28,7 @@ public class LocalStorageImpl implements IStorage {
     @Override
     public SudokuGame getGameData() throws IOException {
         FileInputStream fileInputStream = new FileInputStream(GAME_DATA);
+        System.out.print(fileInputStream+ " fileInputStream");
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
         try {
             SudokuGame gameState = (SudokuGame) objectInputStream.readObject();
